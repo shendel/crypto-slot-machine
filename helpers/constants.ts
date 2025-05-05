@@ -30,6 +30,11 @@ export const CURRENCIES = {
     name: "FTM",
     symbol: 'FTM',
     decimals: 18
+  },
+  ENG: {
+    name: 'ENG',
+    symbol: 'ENG',
+    decimals: 18
   }
 }
 
@@ -49,9 +54,20 @@ export const MULTICALL_CONTRACTS = {
   421611: '0xf27ee99622c3c9b264583dacb2cce056e194494f',
   250: '0x22D4cF72C45F8198CfbF4B568dBdB5A85e8DC0B5',
   420: '0x83048f0Bf34FEeD8CEd419455a4320A735a92e9d',
+  1800500: '0x83048f0Bf34FEeD8CEd419455a4320A735a92e9d', // Energy Chain
 }
 
 export const AVAILABLE_NETWORKS_INFO = [
+  {
+    slug: 'eng_localhost',
+    chainName: 'EnergyChain',
+    chainId: '0x1B7934',
+    networkVersion: 1800500,
+    rpcUrls: ['https://rpc.energy-blockchain.ru/'],
+    blockExplorerUrls: ['#'],
+    isTestnet: true,
+    nativeCurrency: CURRENCIES.ENG
+  },
   {
     slug: 'bsc_testnet',
     chainName: 'Binance Smart Chain - Testnet',
